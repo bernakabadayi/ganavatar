@@ -1,0 +1,42 @@
+Submodule eg3d contains modified content
+diff --git a/eg3d/eg3d/training/volumetric_rendering/renderer.py b/eg3d/eg3d/training/volumetric_rendering/renderer.py
+old mode 100644
+new mode 100755
+index a27aea6..99f7192
+--- a/eg3d/eg3d/training/volumetric_rendering/renderer.py
++++ b/eg3d/eg3d/training/volumetric_rendering/renderer.py
+@@ -20,6 +20,7 @@ import torch.nn as nn
+ from training.volumetric_rendering.ray_marcher import MipRayMarcher2
+ from training.volumetric_rendering import math_utils
+ 
++# new planes
+ def generate_planes():
+     """
+     Defines planes by the three vectors that form the "axes" of the
+@@ -33,8 +34,24 @@ def generate_planes():
+                             [0, 0, 1],
+                             [0, 1, 0]],
+                             [[0, 0, 1],
+-                            [1, 0, 0],
+-                            [0, 1, 0]]], dtype=torch.float32)
++                            [0, 1, 0],
++                            [1, 0, 0]]], dtype=torch.float32)
++
++# def generate_planes():
++#     """
++#     Defines planes by the three vectors that form the "axes" of the
++#     plane. Should work with arbitrary number of planes and planes of
++#     arbitrary orientation.
++#     """
++#     return torch.tensor([[[1, 0, 0],
++#                             [0, 1, 0],
++#                             [0, 0, 1]],
++#                             [[1, 0, 0],
++#                             [0, 0, 1],
++#                             [0, 1, 0]],
++#                             [[0, 0, 1],
++#                             [1, 0, 0],
++#                             [0, 1, 0]]], dtype=torch.float32)
+ 
+ def project_onto_planes(planes, coordinates):
+     """

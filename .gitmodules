@@ -1,0 +1,3 @@
+[submodule "eg3d"]
+	path = eg3d
+	url = https://github.com/NVlabs/eg3d.git

@@ -1,0 +1,47 @@
+# YAML Document starts with ---
+# Comments start with #
+
+seeds: 0-100
+network: /training_runs_rebut/00025-ffhq-nf01gan2-gpus8-batch32-gamma5/network-snapshot-000080.pkl
+bfmw: /mapping_data/out100
+fov_deg: 16
+lr: 0.001
+batch_size: 1
+save_freq: 500
+output_dir: '../out/log_nf01_25-1000-new'
+epochs: 3000000
+freq_t: 20
+freq_v: 3 # epoch
+save_freq: 100
+test_network: /log/flame_training_20240302_120929/model_20240302_120929_6000.pth
+fix_pose:   [
+        0.9671400732643444,
+        0.0073954002195876535,
+        0.2541364123093852,
+        -0.9594334906575249,
+        -0.003923425888685972,
+        -0.9990237383110651,
+        0.04400272323263074,
+        -0.1394028311652368,
+        0.2542137477082255,
+        -0.04355388145991988,
+        -0.9661669027659583,
+        3.4992523161030444,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        4.63751220703125,
+        0.0,
+        0.4906522333621979,
+        0.0,
+        4.63751220703125,
+        0.5068882703781128,
+        0.0,
+        0.0,
+        1.0
+    ]
+r: 3.6873586389753408
+gt_img_path: '/nf01/key/'
+path: '/nf01/bfm/'
+pose_path: '/nf01/dataset_test.json'
