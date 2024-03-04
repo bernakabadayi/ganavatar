@@ -61,7 +61,7 @@ Ganavatar uses expression parameters to train mapping network. Expression parame
 from frontal images can be extracted as follows:
 
 ```bash
-process python scripts/preprocess_mapping.py --indir=/frontal/img
+python scripts/preprocess_mapping.py --indir=/frontal/img
 ```  
 
 Train mapping network
@@ -72,7 +72,7 @@ python lib/mapping_train.py --args ../cfg/mapnet/args_train_nf01_neck.yaml
 
 Test mapping network
 ```bash
-python python mapping_test.py --args ../../cfg/maptest/args_test_nf01_neck.yaml
+python mapping_test.py --args ../../cfg/maptest/args_test_nf01_neck.yaml
 ```  
 
 ## Run Ganavatar on your dataset
@@ -92,7 +92,7 @@ If you need the pretrained models, please contact [berna.kabadayi@tue.mpg.de](be
 
 ## Citation
 
-Cite as if you find this repository is helpful to your project:
+Cite us if you find this repository is helpful to your project:
 
 
 ```bibtex
@@ -107,7 +107,7 @@ Cite as if you find this repository is helpful to your project:
 ```
 ## Acknowledgments 
 Here are some great resources we benefit from:
-- [EG3D](https://github.com/NVlabs/eg3d) for funetinung our person specific generative model
+- [EG3D](https://github.com/NVlabs/eg3d) for finetuning our person-specific generative model
 - [INSTA](https://github.com/Zielon/INSTA) actors for training
 - [MICA](https://github.com/Zielon/MICA) metrical tracker to obtain FLAME mesh and camera params
 - [Multiface](https://github.com/facebookresearch/multiface) actors for multiview experiments
