@@ -77,6 +77,8 @@ python mapping_test.py --args ../../cfg/maptest/args_test_nf01_neck.yaml
 
 ## Run Ganavatar on your dataset
 
+Sample dataset and appearance model training json can be found [here](https://drive.google.com/drive/folders/1pasgYh5PsJXcoVz7UMGyt2THMyFyxx7c?usp=sharing).
+
 We provide scripts to process [INSTA](https://github.com/Zielon/INSTA) actors for Ganavatar training.
 
 Your tracked mesh (i.e., FLAME) should align with [eg3d marching cube result](../ganavatarelease/dataset/seed_no_indexing_flipped0081_norma_fixed.ply), located in ```models/```. After obtaining transformation matrix, run ```insta2ganavatar.py ```
